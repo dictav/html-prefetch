@@ -1,0 +1,19 @@
+{
+  "name": "beacon.js",
+  "version": "0.0.1",
+  "description": "beacon.js for HTML Prefetch test",
+  "main": "beacon.js",
+  "repository": "https://github.com/dictav/html-prefetch.git",
+  "author": "Shintaro Abe <dictav@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c rollup.config.js > beacon.js"
+  },
+  "devDependencies": {
+    "promise-polyfill": "^6.0.2",
+    "rollup": "^0.41.6",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
