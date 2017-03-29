@@ -20,6 +20,11 @@ func main() {
 		purpose := r.Header.Get("X-Purpose")
 		log.Printf("%s %s moz=%s, purpose=%s\n", r.Method, r.URL.Path, moz, purpose)
 
+		// Ignore cache
+		w.Header().Set("Cache-Control", "no-cache, no-store, must-revalidate")
+		w.Header().Set("Pragma", "no-cache")
+		w.Header().Set("Expires", "0")
+
 		if r.URL.Path == "/header_prefetch.html" {
 			w.Header().Set("Link", "</prefetch.html>; rel=prefetch")
 		}
