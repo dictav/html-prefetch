@@ -25,12 +25,16 @@ func main() {
 		w.Header().Set("Pragma", "no-cache")
 		w.Header().Set("Expires", "0")
 
+		if r.URL.Path == "/header_next.html" {
+			w.Header().Set("Link", "</prefetch.html>; rel=next")
+		}
+
 		if r.URL.Path == "/header_prefetch.html" {
 			w.Header().Set("Link", "</prefetch.html>; rel=prefetch")
 		}
 
-		if r.URL.Path == "/header_next.html" {
-			w.Header().Set("Link", "</prefetch.html>; rel=next")
+		if r.URL.Path == "/header_prerender.html" {
+			w.Header().Set("Link", "</prefetch.html>; rel=prerender")
 		}
 
 		h := http.FileServer(http.Dir(pwd))

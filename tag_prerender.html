@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <link rel="prerender" href="/prefetch.html">
+  <title>Tag Prerender</title>
+</head>
+<body>
+  <h1>Tag Prerender</h1>
+  <a href="/prefetch.html">Prefetch</a>
+  <script src="/beacon.js"></script>
+  <script>
+sendBeacon("/echo", "Tag Prerender")
+  </script>
+</body>
+</html>
