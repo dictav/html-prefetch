@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-  <title>Main</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+  <title>Header Prefetch</title>
 </head>
 <body>
-  <h1>Main</h1>
+  <h1>Header Prefetch</h1>
   <a href="/prefetch.html">Prefetch</a>
   <script src="/beacon.js"></script>
   <script>
-sendBeacon("/echo", "INDEX")
+sendBeacon("/echo", "Header Prefetch")
   </script>
 </body>
 </html>

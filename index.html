@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>INDEX</title>
+</head>
+<body>
+  <div id="ua"></div>
+  <dl>
+    <dt><a href="/header_next.html">Heder Next</a>
+    <dd><code>Link: &lt;/prefetch.html&gt;; refl="next"</code>
+
+    <dt><a href="/header_prefetch.html">Heder Prefetch</a>
+    <dd><code>Link: &lt;/prefetch.html&gt;; refl="prefetch"</code>
+
+    <dt><a href="/tag_next.html">Tag Next</a>
+    <dd><code>&lt;link rel="next" href="/prefetch.html"&gt;</code>
+
+    <dt><a href="/tag_prefetch.html">Tag Prefetch</a>
+    <dd><code>&lt;link rel="prefetch" href="/prefetch.html"&gt;</code>
+  </ol>
+  <script>
+document.getElementById('ua').innerHTML = navigator.userAgent
+  </script>
+</body>
+</html>
