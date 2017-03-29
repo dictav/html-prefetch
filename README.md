@@ -49,5 +49,6 @@ $ open http://localhost:8080
 
 ## 注意
 
-- ブラウザがファイルをキャッシュしているときは Prefetch は行われない。
-- PrefetchしたJSを実行するのは Chrome と Safari
+- ブラウザがファイルをキャッシュしているときは Prefetch は行われない
+- PrefetchしたJSを実行するのは Chrome と Safari。ただしSafariは実際に表示されているので Chrome と等価ではない。
+- Chrome で EventListener `visibilitychange` を追加することで、`visibilityState === 'visible'` になった時に Beacon を飛ばすことが可能
